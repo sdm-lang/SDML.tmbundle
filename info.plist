@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>contactEmailRot13</key>
+	<string>wbuafgbafxw@tznvy.pbz</string>
+	<key>contactName</key>
+	<string>Johnston, Simon</string>
+	<key>description</key>
+	<string>Bundle for SDML (Simple Domain Modeling Language) Support</string>
+	<key>mainMenu</key>
+	<dict>
+		<key>items</key>
+		<array>
+			<string>9F7F58BF-2AB6-4362-A17E-01BCA700023A</string>
+			<string>6C6CE3F3-58D4-497B-A319-50637B61E99C</string>
+			<string>------------------------------------</string>
+		</array>
+		<key>submenus</key>
+		<dict>
+			<key>6C6CE3F3-58D4-497B-A319-50637B61E99C</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>C6235F71-E242-4467-9678-9B7082DD6BE2</string>
+				</array>
+				<key>name</key>
+				<string>Annotations</string>
+			</dict>
+			<key>9F7F58BF-2AB6-4362-A17E-01BCA700023A</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>63E1FA67-C02A-4D60-9210-1F5DFB45194D</string>
+					<string>------------------------------------</string>
+					<string>7F5CA0BD-892A-43FF-B73D-60D15D71DC39</string>
+					<string>0452B269-F89C-46D6-A462-F94EDD7EA201</string>
+					<string>457EBBE6-C8B7-4398-801E-C3A63B2804D7</string>
+				</array>
+				<key>name</key>
+				<string>Declarations</string>
+			</dict>
+			<key>B62ED7FB-E83D-4927-87A9-D7BC8CF045EB</key>
+			<dict>
+				<key>name</key>
+				<string>Generate</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>name</key>
+	<string>SDML</string>
+	<key>source</key>
+	<dict>
+		<key>method</key>
+		<string>git</string>
+		<key>url</key>
+		<string>git@github.com:sdm-lang/sdml.tmbundle.git</string>
+	</dict>
+	<key>uuid</key>
+	<string>144EDD36-0CC1-400E-99FE-CBF8899B7E82</string>
+</dict>
+</plist>
