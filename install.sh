@@ -1,14 +1,28 @@
 #!/usr/bin/env sh
 
+case "$OSTYPE" in
+  darwin*)  INSTALL_DIR='$HOME/Library/Application Support' ;;
+  linux*)   INSTALL_DIR='$HOME/.config' ;;
+  msys*)    INSTALL_DIR='$HOMEPATH/AppData/Roaming' ;;
+  cygwin*)  INSTALL_DIR='$HOMEPATH/AppData/Roaming' ;;
+  *)        echo "unsupported: $OSTYPE"; exit 1 ;;
+esac
+
 function install {
 	editor=$1
 	command=$2
-	bundle_path=$3
+	bundle_dir=$3
+
+	if [[ "$OSTYPE" == "linux"* ]]; then
+		safe_editor=$(echo "${editor}" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
+		install_path = '${INSTALL_DIR}/${safe_editor}/${bundle_dir}'
+	else
+		install_path = '${INSTALL_DIR}/${editor}/${bundle_dir}'
+	fi
 	
 	if command -v ${command} 2>&1 >/dev/null; then
 		echo 'Installing SDML bundle in ${editor}'
-		mkdir -p ${bundle_path}
-		cd ${bundle_path}
+		cd ${install_path}
 		if [[ -d "./SDML.tmbundle.git" ]]; then
 			cd SDML.tmbundle
 			git pull
@@ -24,6 +38,6 @@ function install {
 	fi
 }
 
-install TextMate mate ~/Library/Application\ Support/TextMate/Bundles
+install TextMate mate Bundles
 
-install 'Sublime Text' subl ~/Library/Application\ Support/Sublime\ Text/Packages/User
+install 'Sublime Text' subl Packages
