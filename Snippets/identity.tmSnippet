@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>identity ${1|id,key|} -&gt; ${2|unknown,integer,sdml:Uuid|}</string>
+	<key>name</key>
+	<string>identity member</string>
+	<key>scope</key>
+	<string>source.sdml meta.declaration.entity.sdml</string>
+	<key>tabTrigger</key>
+	<string>id</string>
+	<key>uuid</key>
+	<string>5393A100-3A6E-4769-BE65-E70329F46503</string>
+</dict>
+</plist>

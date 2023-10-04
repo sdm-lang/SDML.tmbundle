@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>datatype ${1} &lt;- opaque ${2} is
+  @skos:prefLabel = "${3}"@en
+end</string>
+	<key>name</key>
+	<string>datatype (opaque)</string>
+	<key>scope</key>
+	<string>source.sdml</string>
+	<key>uuid</key>
+	<string>D60E3FA3-B694-4547-A633-990C50FAAE6E</string>
+</dict>
+</plist>

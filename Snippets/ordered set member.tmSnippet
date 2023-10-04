@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>{$1} -&gt; {ordered unique 0..} ${$2|unknown|}</string>
+	<key>name</key>
+	<string>ordered set member</string>
+	<key>scope</key>
+	<string>source.sdml</string>
+	<key>tabTrigger</key>
+	<string>oset</string>
+	<key>uuid</key>
+	<string>A387DD46-FF97-4C42-9794-7B643C787540</string>
+</dict>
+</plist>
