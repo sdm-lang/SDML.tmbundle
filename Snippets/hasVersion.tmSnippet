@@ -3,16 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>event ${1} source ${2} is
-  name -&gt; Type
-end</string>
+	<string>@dc:hasVersion = "${1}"</string>
 	<key>name</key>
-	<string>event</string>
+	<string>hasVersion</string>
 	<key>scope</key>
 	<string>source.sdml</string>
-	<key>tabTrigger</key>
-	<string>ev</string>
 	<key>uuid</key>
-	<string>457EBBE6-C8B7-4398-801E-C3A63B2804D7</string>
+	<string>AA103565-1C8C-4C5F-8FF3-2B965510A155</string>
 </dict>
 </plist>

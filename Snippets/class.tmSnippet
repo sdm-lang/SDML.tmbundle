@@ -3,16 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>event ${1} source ${2} is
-  name -&gt; Type
+	<string>class ${1}({$2}) is
+  def method(self -&gt; {$2}) -&gt; {$2}
 end</string>
 	<key>name</key>
-	<string>event</string>
+	<string>class</string>
 	<key>scope</key>
 	<string>source.sdml</string>
-	<key>tabTrigger</key>
-	<string>ev</string>
 	<key>uuid</key>
-	<string>457EBBE6-C8B7-4398-801E-C3A63B2804D7</string>
+	<string>67C878EB-ABEE-40D1-9DF9-C9E7E7FC4296</string>
 </dict>
 </plist>

@@ -3,16 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>event ${1} source ${2} is
-  name -&gt; Type
+	<string>union ${1} is
+  TypeOne
+  TypeTwo
 end</string>
 	<key>name</key>
-	<string>event</string>
+	<string>union</string>
 	<key>scope</key>
 	<string>source.sdml</string>
 	<key>tabTrigger</key>
-	<string>ev</string>
+	<string>un</string>
 	<key>uuid</key>
-	<string>457EBBE6-C8B7-4398-801E-C3A63B2804D7</string>
+	<string>4238BAAD-27F2-4279-9C37-44B664467151</string>
 </dict>
 </plist>

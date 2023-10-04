@@ -8,6 +8,19 @@
 	<string>Johnston, Simon</string>
 	<key>description</key>
 	<string>Bundle for SDML (Simple Domain Modeling Language) Support</string>
+	<key>name</key>
+	<string>SDML</string>
+	<key>uuid</key>
+	<string>144EDD36-0CC1-400E-99FE-CBF8899B7E82</string>
+	<key>version</key>
+	<string>0.1.0</string>
+	<key>source</key>
+	<dict>
+		<key>method</key>
+		<string>git</string>
+		<key>url</key>
+		<string>git@github.com:sdm-lang/sdml.tmbundle.git</string>
+	</dict>
 	<key>mainMenu</key>
 	<dict>
 		<key>items</key>
@@ -18,15 +31,6 @@
 		</array>
 		<key>submenus</key>
 		<dict>
-			<key>6C6CE3F3-58D4-497B-A319-50637B61E99C</key>
-			<dict>
-				<key>items</key>
-				<array>
-					<string>C6235F71-E242-4467-9678-9B7082DD6BE2</string>
-				</array>
-				<key>name</key>
-				<string>Annotations</string>
-			</dict>
 			<key>9F7F58BF-2AB6-4362-A17E-01BCA700023A</key>
 			<dict>
 				<key>items</key>
@@ -35,10 +39,44 @@
 					<string>------------------------------------</string>
 					<string>7F5CA0BD-892A-43FF-B73D-60D15D71DC39</string>
 					<string>0452B269-F89C-46D6-A462-F94EDD7EA201</string>
+					<string>68E60143-6442-43AC-BB1A-225E14A1748F</string>
 					<string>457EBBE6-C8B7-4398-801E-C3A63B2804D7</string>
+					<string>CD608B6D-4ECA-4DDD-88FD-CCFF09ADB2C8</string>
+					<string>F5837AE3-CA8B-4742-BAC1-8BA27ED90130</string>
+					<string>4238BAAD-27F2-4279-9C37-44B664467151</string>
+					<string>------------------------------------</string>
+					<string>67C878EB-ABEE-40D1-9DF9-C9E7E7FC4296</string>
 				</array>
 				<key>name</key>
 				<string>Declarations</string>
+			</dict>
+			<key>6C6CE3F3-58D4-497B-A319-50637B61E99C</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>99D7951B-255D-4815-B219-37DF5D14498F</string>
+					<string>AB119AD1-5FC6-42AE-8B1F-4CF8C3BF8061</string>
+					<string>------------------------------------</string>
+					<string>2B2D323D-8A7C-483C-8FB6-BA74300516AF</string>
+					<string>F1CF9E6B-411B-414F-AD8C-8DEB36774DDA</string>
+					<string>E0C15AC5-2B1C-4008-8F2F-7812C0F8C1B4</string>
+					<string>DB843E36-A882-44C8-8D07-EA23B9E93479</string>
+					<string>AA103565-1C8C-4C5F-8FF3-2B965510A155</string>
+					<string>109604F2-9DEE-4A30-9835-0C567E5431A2</string>
+					<string>9F1B4353-C221-43A4-81B7-9B4BE9D0288C</string>
+					<string>F21D437D-9D45-4B9A-83A6-540AEB6C277B</string>
+					<string>47768F01-CA3D-4CA9-ADF4-C06A94FB2636</string>
+					<string>------------------------------------</string>
+					<string>1454D1C0-21C8-42C4-9275-66CD04849F1D</string>
+					<string>16859DF4-5914-498F-AE44-EAC84DC6D838</string>
+					<string>63C77D56-A8B9-4B98-B0D5-5CD99D7A2F10</string>
+					<string>EDBF1795-2091-4F78-92D3-D1CEEEAE22AE</string>
+					<string>C6235F71-E242-4467-9678-9B7082DD6BE2</string>
+					<string>------------------------------------</string>
+					<string>7FF00D2B-BDFC-4397-B696-FF7433874012</string>
+				</array>
+				<key>name</key>
+				<string>Annotations</string>
 			</dict>
 			<key>B62ED7FB-E83D-4927-87A9-D7BC8CF045EB</key>
 			<dict>
@@ -47,16 +85,5 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>name</key>
-	<string>SDML</string>
-	<key>source</key>
-	<dict>
-		<key>method</key>
-		<string>git</string>
-		<key>url</key>
-		<string>git@github.com:sdm-lang/sdml.tmbundle.git</string>
-	</dict>
-	<key>uuid</key>
-	<string>144EDD36-0CC1-400E-99FE-CBF8899B7E82</string>
 </dict>
 </plist>

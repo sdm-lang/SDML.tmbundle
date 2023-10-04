@@ -3,16 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>event ${1} source ${2} is
-  name -&gt; Type
-end</string>
+	<string>@dc:contributor = "${1}"</string>
 	<key>name</key>
-	<string>event</string>
+	<string>contributor</string>
 	<key>scope</key>
 	<string>source.sdml</string>
-	<key>tabTrigger</key>
-	<string>ev</string>
 	<key>uuid</key>
-	<string>457EBBE6-C8B7-4398-801E-C3A63B2804D7</string>
+	<string>2B2D323D-8A7C-483C-8FB6-BA74300516AF</string>
 </dict>
 </plist>

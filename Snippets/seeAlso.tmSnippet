@@ -3,16 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>event ${1} source ${2} is
-  name -&gt; Type
-end</string>
+	<string>@rdfs:seeAlso = &lt;#${1}&gt;</string>
 	<key>name</key>
-	<string>event</string>
+	<string>seeAlso</string>
 	<key>scope</key>
 	<string>source.sdml</string>
-	<key>tabTrigger</key>
-	<string>ev</string>
 	<key>uuid</key>
-	<string>457EBBE6-C8B7-4398-801E-C3A63B2804D7</string>
+	<string>AB119AD1-5FC6-42AE-8B1F-4CF8C3BF8061</string>
 </dict>
 </plist>

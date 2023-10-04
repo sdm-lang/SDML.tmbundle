@@ -3,16 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>event ${1} source ${2} is
-  name -&gt; Type
-end</string>
+	<string>@skos:editorialNote = "${1}"@en</string>
 	<key>name</key>
-	<string>event</string>
+	<string>editorialNote</string>
 	<key>scope</key>
 	<string>source.sdml</string>
-	<key>tabTrigger</key>
-	<string>ev</string>
 	<key>uuid</key>
-	<string>457EBBE6-C8B7-4398-801E-C3A63B2804D7</string>
+	<string>63C77D56-A8B9-4B98-B0D5-5CD99D7A2F10</string>
 </dict>
 </plist>

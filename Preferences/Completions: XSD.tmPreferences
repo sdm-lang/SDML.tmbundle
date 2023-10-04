@@ -5,53 +5,11 @@
 	<key>name</key>
 	<string>Completions: XSD</string>
 	<key>scope</key>
-	<string>source.turtle</string>
+	<string>source.sdml</string>
 	<key>settings</key>
 	<dict>
 		<key>completions</key>
 		<array>
-			<string>string</string>
-			<string>boolean</string>
-			<string>decimal</string>
-			<string>float</string>
-			<string>double</string>
-			<string>duration</string>
-			<string>dateTime</string>
-			<string>time</string>
-			<string>date</string>
-			<string>gYearMonth</string>
-			<string>gYear</string>
-			<string>gMonthDay</string>
-			<string>gDay</string>
-			<string>gMonth</string>
-			<string>hexBinary</string>
-			<string>base64Binary</string>
-			<string>anyURI</string>
-			<string>normalizedString</string>
-			<string>token</string>
-			<string>language</string>
-			<string>NMTOKEN</string>
-			<string>NMTOKENS</string>
-			<string>Name</string>
-			<string>NCName</string>
-			<string>ID</string>
-			<string>IDREF</string>
-			<string>IDREFS</string>
-			<string>ENTITY</string>
-			<string>ENTITIES</string>
-			<string>integer</string>
-			<string>nonPositiveInteger</string>
-			<string>negativeInteger</string>
-			<string>long</string>
-			<string>int</string>
-			<string>short</string>
-			<string>byte</string>
-			<string>nonNegativeInteger</string>
-			<string>unsignedLong</string>
-			<string>unsignedInt</string>
-			<string>unsignedShort</string>
-			<string>unsignedByte</string>
-			<string>positiveInteger</string>
 			<string>xsd:string</string>
 			<string>xsd:boolean</string>
 			<string>xsd:decimal</string>

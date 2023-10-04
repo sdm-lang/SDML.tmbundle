@@ -28,7 +28,7 @@
 			<key>comment</key>
 			<string>Module Declaration</string>
 			<key>match</key>
-			<string>\b(module)\b\s+([a-zA-Z][a-zA-Z0-9]*)</string>
+			<string>\b(module)\b\s+([\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*)</string>
 			<key>name</key>
 			<string>meta.declaration.module.sdml</string>
 		</dict>
@@ -119,7 +119,7 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>Type Declarations</string>
+			<string>Product Type Declarations</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -128,7 +128,7 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>keyword.other.type.sdml</string>
+							<string>storage.type.type.sdml</string>
 						</dict>
 						<key>2</key>
 						<dict>
@@ -147,7 +147,7 @@
 						</dict>
 					</dict>
 					<key>match</key>
-					<string>\b(datatype)\b\s+([\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*)\s*(&lt;-)\s*([\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*(?::[\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*)?)</string>
+					<string>\b(datatype)\b\s+([\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*)\s*((?:&lt;-)|←)\s*([\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*(?::[\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*)?)</string>
 					<key>name</key>
 					<string>meta.declaration.type.sdml</string>
 				</dict>
@@ -157,7 +157,7 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>keyword.other.entity.sdml</string>
+							<string>storage.type.entity.sdml</string>
 						</dict>
 						<key>2</key>
 						<dict>
@@ -176,26 +176,7 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>keyword.other.enum.sdml</string>
-						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>entity.name.type.sdml</string>
-						</dict>
-					</dict>
-					<key>match</key>
-					<string>\b(enum)\b\s+([\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*)</string>
-					<key>name</key>
-					<string>meta.declaration.enum.sdml</string>
-				</dict>
-				<dict>
-					<key>captures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>keyword.other.event.sdml</string>
+							<string>storage.type.event.sdml</string>
 						</dict>
 						<key>2</key>
 						<dict>
@@ -224,7 +205,7 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>keyword.other.property.sdml</string>
+							<string>storage.type.property.sdml</string>
 						</dict>
 						<key>2</key>
 						<dict>
@@ -243,7 +224,7 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>keyword.other.structure.sdml</string>
+							<string>storage.type.structure.sdml</string>
 						</dict>
 						<key>2</key>
 						<dict>
@@ -257,31 +238,8 @@
 					<string>meta.declaration.structure.sdml</string>
 				</dict>
 				<dict>
-					<key>captures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>keyword.other.union.sdml</string>
-						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>entity.name.type.sdml</string>
-						</dict>
-					</dict>
-					<key>match</key>
-					<string>\b(union)\b\s+([\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*)</string>
-					<key>name</key>
-					<string>meta.declaration.union.sdml</string>
-				</dict>
-				<dict>
 					<key>include</key>
 					<string>#kw_is</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#kw_of</string>
 				</dict>
 				<dict>
 					<key>include</key>
@@ -302,6 +260,117 @@
 				<dict>
 					<key>include</key>
 					<string>#member_def</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Sum Type Declarations</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>storage.type.enum.sdml</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>entity.name.type.sdml</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>\b(enum)\b\s+([\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*)</string>
+					<key>name</key>
+					<string>meta.declaration.enum.sdml</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>storage.type.union.sdml</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>entity.name.type.sdml</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>\b(union)\b\s+([\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*)</string>
+					<key>name</key>
+					<string>meta.declaration.union.sdml</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#kw_of</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#kw_end</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#variant</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#annotation_property</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#annotation_constraint</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Class Declarations</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>storage.type.class.sdml</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>entity.name.type.sdml</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>\b(class)\b\s+([\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*)</string>
+					<key>name</key>
+					<string>meta.declaration.class.sdml</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#kw_is</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#kw_end</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#method_def</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#annotation_property</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#annotation_constraint</string>
 				</dict>
 			</array>
 		</dict>
@@ -367,31 +436,7 @@
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>#literal_boolean</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#literal_numeric</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#literal_string</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#literal_iri</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#literal_binary</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#value_constructor</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#literal_sequence</string>
+					<string>#value</string>
 				</dict>
 			</array>
 		</dict>
@@ -400,14 +445,14 @@
 			<key>match</key>
 			<string>\\(a|b|n|r|t|v|\\|'|"|0)</string>
 			<key>name</key>
-			<string>constant.character.escape.rust</string>
+			<string>constant.character.escape.sdml</string>
 		</dict>
 		<key>escaped_unicode_character</key>
 		<dict>
 			<key>match</key>
-			<string>\\u\{(\d\d){1,3}\}</string>
+			<string>\\u\{(\h\h){1,3}\}</string>
 			<key>name</key>
-			<string>constant.character.escape.rust</string>
+			<string>constant.character.escape.sdml</string>
 		</dict>
 		<key>expression_cardinality</key>
 		<dict>
@@ -421,12 +466,12 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.other.sdml</string>
+					<string>storage.modifier.ordering.sdml</string>
 				</dict>
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.other.sdml</string>
+					<string>storage.modifier.uniqueness.sdml</string>
 				</dict>
 				<key>4</key>
 				<dict>
@@ -466,7 +511,7 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>variable.other.field.sdml</string>
+					<string>entity.name.member.sdml</string>
 				</dict>
 				<key>3</key>
 				<dict>
@@ -576,9 +621,16 @@
 		<key>literal_boolean</key>
 		<dict>
 			<key>match</key>
-			<string>\b(true|false)\b</string>
+			<string>\b(true|false|⊤|⊥)\b</string>
 			<key>name</key>
 			<string>constant.language.boolean.sdml</string>
+		</dict>
+		<key>literal_empty_sequence</key>
+		<dict>
+			<key>begin</key>
+			<string>\b∅\b</string>
+			<key>name</key>
+			<string>meta.literal.sequence.empty.sdml</string>
 		</dict>
 		<key>literal_iri</key>
 		<dict>
@@ -635,23 +687,7 @@
 			<array>
 				<dict>
 					<key>include</key>
-					<string>#literal_boolean</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#literal_numeric</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#literal_string</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#literal_iri</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#literal_binary</string>
+					<string>#simple_value</string>
 				</dict>
 				<dict>
 					<key>include</key>
@@ -707,7 +743,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>variable.other.field.sdml</string>
+					<string>entity.name.member.sdml</string>
 				</dict>
 				<key>2</key>
 				<dict>
@@ -717,7 +753,7 @@
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>variable.other.field.sdml</string>
+					<string>entity.name.member.sdml</string>
 				</dict>
 				<key>4</key>
 				<dict>
@@ -746,37 +782,166 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>([\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*)(?:\s*(\()([\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*)(\))\s*)?\s*(-&gt;)\s*(\s*\{.*\}\s*)?([\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*(?::[\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*)?)</string>
+			<string>([\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*)(?:\s*(\()([\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*)(\))\s*)?\s*((?:-&gt;)|→)\s*(\s*\{.*\}\s*)?([\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*(?::[\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*)?)</string>
 			<key>name</key>
 			<string>meta.declaration.member.sdml</string>
 		</dict>
-		<key>operator_equality</key>
+		<key>method_def</key>
 		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.method.sdml</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.sdml</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.parameters.begin.sdml</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#parameter</string>
+						</dict>
+					</array>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.parameters.end.sdml</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.hastype</string>
+				</dict>
+				<key>7</key>
+				<dict>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#expression_cardinality</string>
+						</dict>
+					</array>
+				</dict>
+				<key>8</key>
+				<dict>
+					<key>name</key>
+					<string>support.class.sdml</string>
+				</dict>
+			</dict>
 			<key>match</key>
-			<string>=</string>
+			<string>\b(def)\b\s+([\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*)\s*(?:(\()(.*)(\)))\s*((?:-&gt;)|→)\s*(\s*\{.*\}\s*)?([\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*(?::[\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*)?)</string>
 			<key>name</key>
-			<string>keyword.operator.assignment.sdml</string>
+			<string>meta.declaration.method.sdml</string>
 		</dict>
-		<key>operator_hastype</key>
+		<key>parameter</key>
 		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter.sdml</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.hastype</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#expression_cardinality</string>
+						</dict>
+					</array>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>support.class.sdml</string>
+				</dict>
+			</dict>
 			<key>match</key>
-			<string>-&gt;</string>
+			<string>([\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*)\s*((?:-&gt;)|→)\s*(\s*\{.*\}\s*)?([\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*(?::[\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*)?)</string>
 			<key>name</key>
-			<string>keyword.operator.hastype.sdml</string>
-		</dict>
-		<key>operator_typerestriction</key>
-		<dict>
-			<key>match</key>
-			<string>&lt;-</string>
-			<key>name</key>
-			<string>keyword.operator.typerestriction.sdml</string>
+			<string>meta.declaration.parameter.sdml</string>
 		</dict>
 		<key>simple_types</key>
 		<dict>
 			<key>match</key>
-			<string>\b(boolean|unsigned|integer|decimal|double|string|iri|binary|unknown)\b</string>
+			<string>\b(boolean|unsigned|integer|decimal|double|string|iri|binary)\b</string>
 			<key>name</key>
 			<string>storage.type.sdml</string>
+		</dict>
+		<key>simple_value</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#literal_boolean</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#literal_numeric</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#literal_string</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#literal_iri</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#literal_binary</string>
+				</dict>
+			</array>
+		</dict>
+		<key>unknown_type</key>
+		<dict>
+			<key>match</key>
+			<string>\bunknown\b</string>
+			<key>name</key>
+			<string>storage.type.unknown.sdml</string>
+		</dict>
+		<key>value</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#simple_value</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#value_constructor</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#literal_sequence</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#literal_empty_sequence</string>
+				</dict>
+			</array>
 		</dict>
 		<key>value_constructor</key>
 		<dict>
@@ -809,25 +974,34 @@
 			<array>
 				<dict>
 					<key>include</key>
-					<string>#literal_boolean</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#literal_numeric</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#literal_string</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#literal_iri</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#literal_binary</string>
+					<string>#simple_value</string>
 				</dict>
 			</array>
+		</dict>
+		<key>variant</key>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.variant.sdml</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.other.as.sdml</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.variant.sdml</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>([\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*(?::[\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*)?)(?:\s+(as)\s+([\p{Lower}\p{Upper}][\p{Lower}\p{Upper}\p{Digit}]*(?:_[\p{Lower}\p{Upper}\p{Digit}]+)*))?</string>
+			<key>name</key>
+			<string>meta.declaration.variant.sdml</string>
 		</dict>
 	</dict>
 	<key>scopeName</key>

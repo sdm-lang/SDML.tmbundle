@@ -3,16 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>event ${1} source ${2} is
-  name -&gt; Type
-end</string>
+	<string>import [dc skos xsd]</string>
 	<key>name</key>
-	<string>event</string>
+	<string>Import Prelude</string>
 	<key>scope</key>
 	<string>source.sdml</string>
-	<key>tabTrigger</key>
-	<string>ev</string>
 	<key>uuid</key>
-	<string>457EBBE6-C8B7-4398-801E-C3A63B2804D7</string>
+	<string>7FF00D2B-BDFC-4397-B696-FF7433874012</string>
 </dict>
 </plist>

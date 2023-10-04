@@ -3,16 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>event ${1} source ${2} is
-  name -&gt; Type
-end</string>
+	<string>@dc:issued = xsd:date("${1}")</string>
 	<key>name</key>
-	<string>event</string>
+	<string>issued</string>
 	<key>scope</key>
 	<string>source.sdml</string>
-	<key>tabTrigger</key>
-	<string>ev</string>
 	<key>uuid</key>
-	<string>457EBBE6-C8B7-4398-801E-C3A63B2804D7</string>
+	<string>109604F2-9DEE-4A30-9835-0C567E5431A2</string>
 </dict>
 </plist>
