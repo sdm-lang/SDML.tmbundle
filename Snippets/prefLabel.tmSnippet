@@ -6,6 +6,8 @@
 	<string>@skos:prefLabel = "${1}"@en</string>
 	<key>name</key>
 	<string>prefLabel</string>
+	<key>scope</key>
+	<string>source.sdml</string>
 	<key>tabTrigger</key>
 	<string>pl</string>
 	<key>uuid</key>
