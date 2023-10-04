@@ -19,12 +19,26 @@ This [TextMate](https://macromates.com/) bundle contains a language grammar and 
 
 ## Installation
 
-TextMate, and most editors that support TextMate bundles, allow the installation of bundles simply by extracting an archive or cloning the repository into the application's bundle directory. This bundle is no different. Below is a list of common bundle directories.
+TextMate, and most editors that support TextMate bundles, allow the installation of bundles simply by extracting an archive or cloning the repository into the application's bundle directory. This bundle is no different.
 
-* TextMate : `~/Library/Application Support/TextMate/Bundles`
-* Sublime Text : `~/Library/Application Support/Sublime Text/Packages/User`
+For TextMate, the easiest approach is the install shell script shown below. This will create a new folder in TextMate's bundle folder and clone the Github repository locally. 
 
-Other editors support using TextMate but not natively; for example, Intellij tools such as IDEA have instructions https://www.jetbrains.com/help/idea/textmate.html. 
+```bash
+$ curl https://raw.githubusercontent.com/sdm-lang/SDML.tmbundle/main/install.sh | sh
+```
+
+### Sublime Text
+
+While the installer above *should* also work for [Sublime Text](https://www.sublimetext.com/) it is not yet tested.
+
+
+### Intellij
+
+Intellij tools such as IDEA have instructions https://www.jetbrains.com/help/idea/textmate.html. 
+
+### VSCode
+
+Still exploring.
 
 ## Screenshots
 
@@ -42,5 +56,5 @@ Finally, note that the symbol list (bottom of the editor window) shows the struc
 
 ## TODO
 
-- The grammar is rudimentary at this point and does get confused with enum/union variants.
+- The grammar is relatively complete with the exception of formal constraints.
 - Currently no interaction with the `sdml` command-line tool.
