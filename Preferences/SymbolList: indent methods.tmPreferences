@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>SymbolList: indent type variants</string>
+	<string>SymbolList: indent methods</string>
 	<key>scope</key>
-	<string>source.sdml meta.declaration.variant entity.name.variant</string>
+	<string>source.sdml meta.declaration.class.sdml entity.name.function.sdml</string>
 	<key>settings</key>
 	<dict>
 		<key>showInSymbolList</key>
@@ -15,6 +15,6 @@
       s/^\s*/ /;  # pad</string>
 	</dict>
 	<key>uuid</key>
-	<string>DE176717-BD97-4EF8-93ED-653993AA98D0</string>
+	<string>B5096866-ADC9-47F5-8C38-39611DA74677</string>
 </dict>
 </plist>
