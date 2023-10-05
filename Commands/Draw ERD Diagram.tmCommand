@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>command</key>
+	<string>#!/usr/bin/env bash
+[[ -f "${TM_BUNDLE_SUPPORT}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_BUNDLE_SUPPORT}/lib/bash_init.sh"
+
+run_sdml_generate 'draw --diagram entity-relationship' ${TM_FILEPATH} ${TM_FILEPATH%.sdm*}.${SDML_DRAWING_FORMAT}
+</string>
+	<key>name</key>
+	<string>Draw ERD Diagram</string>
+	<key>outputLocation</key>
+	<string>discard</string>
+	<key>scope</key>
+	<string>source.sdml</string>
+	<key>uuid</key>
+	<string>2B090F08-72D0-4E3D-8524-81CE24E53786</string>
+</dict>
+</plist>

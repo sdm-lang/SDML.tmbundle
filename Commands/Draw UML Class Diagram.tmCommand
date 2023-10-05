@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>command</key>
+	<string>#!/usr/bin/env bash
+[[ -f "${TM_BUNDLE_SUPPORT}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_BUNDLE_SUPPORT}/lib/bash_init.sh"
+
+run_sdml_generate 'draw --diagram uml-class' ${TM_FILEPATH} ${TM_FILEPATH%.sdm*}.${SDML_DRAWING_FORMAT}
+</string>
+	<key>name</key>
+	<string>Draw UML Class Diagram</string>
+	<key>outputLocation</key>
+	<string>discard</string>
+	<key>scope</key>
+	<string>source.sdml</string>
+	<key>uuid</key>
+	<string>3FDF52DD-71D1-4296-96CF-F9D92FA6F877</string>
+</dict>
+</plist>

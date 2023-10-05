@@ -19,7 +19,7 @@ function install {
 	else
 		install_path = '${INSTALL_DIR}/${editor}/${bundle_dir}'
 	fi
-	
+
 	if command -v ${command} 2>&1 >/dev/null; then
 		echo 'Installing SDML bundle in ${editor}'
 		cd ${install_path}
