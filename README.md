@@ -17,6 +17,13 @@
 
 This [TextMate](https://macromates.com/) bundle contains a language grammar and settings for editing [Simple Domain Modeling Language](sdml.io) (SDML) files. 
 
+## Features
+
+1. Syntax highlighting based on a *tmlanguage* grammar.
+2. Declarations added to the window's Symbol List.
+3. Declaration and Annotation snippets.
+4. (Experimental) command-line integration for diagram generation.
+
 ## Installation
 
 TextMate, and most editors that support TextMate bundles, allow the installation of bundles simply by extracting an archive or cloning the repository into the application's bundle directory. This bundle is no different.
