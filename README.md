@@ -17,6 +17,8 @@
 
 This [TextMate](https://macromates.com/) bundle contains a language grammar and settings for editing [Simple Domain Modeling Language](sdml.io) (SDML) files. 
 
+A Github workflow attaches a downloadable `.sublime-package` file to each [release](https://github.com/sdm-lang/SDML.tmbundle/releases/).
+
 ## Features
 
 1. Syntax highlighting based on a *tmlanguage* grammar.
