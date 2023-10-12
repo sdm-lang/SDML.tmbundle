@@ -36,6 +36,8 @@ For TextMate, the easiest approach is the install shell script shown below. This
 $ curl https://raw.githubusercontent.com/sdm-lang/SDML.tmbundle/main/install.sh | sh
 ```
 
+Alternatively, you can download a release zip file from Github and unzip on the TextMate bundle directory.
+
 ### Intellij IDEA
 
 JetBrains tools such as IntelliJ IDEA have instructions https://www.jetbrains.com/help/idea/textmate.html. 
