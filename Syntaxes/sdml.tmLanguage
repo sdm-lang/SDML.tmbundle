@@ -1140,10 +1140,33 @@
 		</dict>
 		<key>literal_numeric</key>
 		<dict>
-			<key>match</key>
-			<string>[0-9]+</string>
-			<key>name</key>
-			<string>constant.numeric.sdml</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\b[+\-]?(?:0|[1-9][0-9]*)(?:\.[0-9]+)[eE][+\-]?(?:0|[1-9][0-9]*)\b</string>
+					<key>name</key>
+					<string>constant.numeric.double.sdml</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\b[+\-]?(?:0|[1-9][0-9]*)(\.[0-9]+)\b</string>
+					<key>name</key>
+					<string>constant.numeric.decimal.sdml</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\b[+\-]?(?:0|[1-9][0-9]*)\b</string>
+					<key>name</key>
+					<string>constant.numeric.integer.sdml</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\b0|[1-9][0-9]*\b</string>
+					<key>name</key>
+					<string>constant.numeric.unsigned.sdml</string>
+				</dict>
+			</array>
 		</dict>
 		<key>literal_sequence</key>
 		<dict>
@@ -1194,7 +1217,7 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>(")(@[a-z]{2})?</string>
+			<string>(")(@[a-z]{2,8}(?:-[A-Z]{3}){0,3}(?:-[A-Z][a-z]{3})?(?:-(?:[A-Z]{2}|[0-9]{3}))?)?</string>
 			<key>endCaptures</key>
 			<dict>
 				<key>1</key>
@@ -1205,7 +1228,7 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>string.quoted.other.language.sdml</string>
+					<string>string.language.natural.sdml</string>
 				</dict>
 			</dict>
 			<key>name</key>

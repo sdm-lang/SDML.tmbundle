@@ -1,4 +1,8 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
+
+SUCCESS="\033[32;1m✓\033[0m"
+WARNING="\033[33;1m!\033[0m"
+ERROR="\033[31;1m✗\033[0m"
 
 case "$OSTYPE" in
   darwin*)  INSTALL_DIR='$HOME/Library/Application Support' ;;
@@ -23,7 +27,7 @@ function install {
 	if command -v ${command} 2>&1 >/dev/null; then
 		echo 'Installing SDML bundle in ${editor}'
 		cd ${install_path}
-		if [[ -d "./SDML.tmbundle.git" ]]; then
+		if [[ -d "./SDML.tmbundle" ]]; then
 			cd SDML.tmbundle
 			git pull
 			cd ..
@@ -34,10 +38,29 @@ function install {
 			osascript -e 'tell app "TextMate" to reload bundles'
 		fi
 	else
-		echo '${editor} (${command}) not installed, skipping.'
+		echo "${WARNING} ${editor} (${command}) not installed, skipping."
 	fi
 }
 
-install TextMate mate Bundles
 
-install 'Sublime Text' subl Packages
+echo "\033[1m"
+cat <<EOF
+
+        ___          _____          ___ 
+       /  /\        /  /::\        /__/\ 
+      /  /:/_      /  /:/\:\      |  |::\ 
+     /  /:/ /\    /  /:/  \:\     |  |:|:\    ___     ___ 
+    /  /:/ /::\  /__/:/ \__\:|  __|__|:|\:\  /__/\   /  /\ 
+   /__/:/ /:/\:\ \  \:\ /  /:/ /__/::::| \:\ \  \:\ /  /:/ 
+   \  \:\/:/~/:/  \  \:\  /:/  \  \:\~~\__\/  \  \:\  /:/ 
+    \  \::/ /:/    \  \:\/:/    \  \:\         \  \:\/:/ 
+     \__\/ /:/      \  \::/      \  \:\         \  \::/ 
+       /__/:/        \__\/        \  \:\         \__\/ 
+       \__\/                       \__\/ 
+                      Domain                      Language
+        Simple                      Modeling
+
+EOF
+echo "\033[0m"
+
+install TextMate mate Bundles

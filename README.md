@@ -34,11 +34,6 @@ For TextMate, the easiest approach is the install shell script shown below. This
 $ curl https://raw.githubusercontent.com/sdm-lang/SDML.tmbundle/main/install.sh | sh
 ```
 
-### Sublime Text
-
-While the installer above *should* also work for [Sublime Text](https://www.sublimetext.com/) it is not yet tested.
-
-
 ### Intellij IDEA
 
 JetBrains tools such as IntelliJ IDEA have instructions https://www.jetbrains.com/help/idea/textmate.html. 
