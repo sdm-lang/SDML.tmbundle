@@ -1,19 +1,6 @@
 # SDML Bundle for TextMate
 
-```
-        ___          _____          ___
-       /  /\        /  /::\        /__/\
-      /  /:/_      /  /:/\:\      |  |::\
-     /  /:/ /\    /  /:/  \:\     |  |:|:\    ___     ___
-    /  /:/ /::\  /__/:/ \__\:|  __|__|:|\:\  /__/\   /  /\
-   /__/:/ /:/\:\ \  \:\ /  /:/ /__/::::| \:\ \  \:\ /  /:/
-   \  \:\/:/~/:/  \  \:\  /:/  \  \:\~~\__\/  \  \:\  /:/
-    \  \::/ /:/    \  \:\/:/    \  \:\         \  \:\/:/
-     \__\/ /:/      \  \::/      \  \:\         \  \::/
-       /__/:/        \__\/        \  \:\         \__\/
-       \__\/          Domain       \__\/          Language
-        Simple                      Modeling
-```
+![SDML Logo Text](https://raw.githubusercontent.com/sdm-lang/.github/main/profile/horizontal-text.svg)
 
 This [TextMate](https://macromates.com/) bundle contains a language grammar and settings for editing [Simple Domain Modeling Language](sdml.io) (SDML) files. 
 
@@ -55,6 +42,14 @@ Similarly a number of useful annotations can be inserted.
 Finally, note that the symbol list (bottom of the editor window) shows the structure of the module with types, members and variants.
 
 ![Symbol List](./images/tm-list.png)
+
+## License
+
+This package is released under the Apache License, Version 2.0. See LICENSE file for details.
+
+## Changes
+
+TBD
 
 ## TODO
 
